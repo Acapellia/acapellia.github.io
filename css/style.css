@@ -10747,9 +10747,12 @@ textarea.form-control {
   padding: 10px;
   border-radius: 15px;
   margin-right: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   height: 35px;
   white-space: nowrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill-level-divider {
