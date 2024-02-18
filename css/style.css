@@ -10756,6 +10756,12 @@ textarea.form-control {
   justify-content: center;
 }
 
+.skill-level {
+  color: #585858;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
 .skill-level-divider {
   border-left: 3px solid #727272;
   height: 2em;
