@@ -9672,3 +9672,17 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.skill-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+      
+.skill {
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
