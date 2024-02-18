@@ -10742,12 +10742,19 @@ textarea.form-control {
 }
 
 .skill {
-  background-color: #bbbbbb;
+  background-color: #e6e5e5;
+  color: #000000;
   padding: 10px;
   border-radius: 15px;
   margin-right: 10px;
   margin-bottom: 10px;
   white-space: nowrap;
+}
+
+.skill-level-divider {
+  border-left: 1px solid #000;
+  height: 1em;
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
