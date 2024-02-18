@@ -1954,45 +1954,15 @@ textarea.form-control {
   }
 }
 
-.hyde.content {
+.skill-box {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-  }
+}
   
-  .hyde.tags {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 auto;
-  }
-  
-  .hyde.tag-wrapper {
-	width: calc(33.33% - 20px);
-	margin-bottom: 20px;
-  }
-  
-  .hyde.tag {
-	display: block;
+.skill {
 	background-color: #f0f0f0;
 	padding: 10px;
-	text-align: center;
-	border-radius: 5px;
-	text-decoration: none;
-	color: #333;
-	transition: background-color 0.3s ease;
-  }
-  
-  .hyde.tag:hover {
-	background-color: #ddd;
-  }
-  
-  .hyde.tag-desc {
-	margin-top: 5px;
-	font-size: 14px;
-  }
-  
-  .hyde.tag-count {
-	margin-top: 5px;
-	font-size: 12px;
-	color: #666;
-  }
+	border-radius: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
