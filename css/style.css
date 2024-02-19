@@ -9835,6 +9835,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-hireme {
+  padding: 7em 0;
   background: #3e64ff;
   margin-bottom: 100px;
   z-index: 0;
@@ -9860,6 +9861,11 @@ h1, h2, h3, h4, h5,
 }
 .ftco-hireme p {
   color: rgba(255, 255, 255, 0.9);
+}
+@media (max-width: 991.98px) {
+  .ftco-hireme {
+    padding: 6em 0;
+  }
 }
 
 .project {
