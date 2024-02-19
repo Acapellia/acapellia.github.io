@@ -10794,4 +10794,15 @@ textarea.form-control {
   padding-right: 5px;
 }
 
+.project-info-section {
+  padding: 2em 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+@media (max-width: 767.98px) {
+  .project-info-section {
+    padding: 6em 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
