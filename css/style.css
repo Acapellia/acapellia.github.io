@@ -9453,7 +9453,7 @@ h1, h2, h3, h4, h5,
 }
 .btn.btn-primary {
   background: #3e64ff;
-  border: 1px solid #3e64ff !important;
+  border: 2px solid #ffffff !important;
   color: #fff !important;
 }
 .btn.btn-primary:hover {
