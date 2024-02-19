@@ -9835,6 +9835,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-hireme {
+  height: 500px;
   padding: 7em 0;
   background: #3e64ff;
   margin-bottom: 100px;
