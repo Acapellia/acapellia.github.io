@@ -9864,7 +9864,7 @@ h1, h2, h3, h4, h5,
   color: rgba(255, 255, 255, 0.9);
 }
 .ftco-hireme .container-fluid-all {
-  height: 100%;
+  flex-grow: 1;
 }
 @media (max-width: 991.98px) {
   .ftco-hireme {
