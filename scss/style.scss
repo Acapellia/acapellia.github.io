@@ -1175,9 +1175,9 @@ textarea.form-control {
 
 .ftco-section {
 	padding: 7em 0;
-	margin-bottom: 50px;
+	margin-bottom: 50;
 	position: relative;
-	@include media-breakpoint-down(sm){
+	@include media-breakpoint-down(md){
 		padding: 6em 0;
 	}
 }
