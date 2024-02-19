@@ -9457,7 +9457,7 @@ h1, h2, h3, h4, h5,
   color: #fff !important;
 }
 .btn.btn-primary:hover {
-  border: 1px solid #3e64ff !important;
+  border: 2px solid #ffffff !important;
   background: #3e64ff !important;
   color: #000000 !important;
 }
