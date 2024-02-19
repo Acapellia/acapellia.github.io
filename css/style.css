@@ -10029,7 +10029,7 @@ textarea.form-control {
 }
 .ftco-section {
   padding: 7em 0;
-  margin-bottom: 50;
+  padding-bottom: 100;
   position: relative;
 }
 @media (max-width: 991.98px) {
