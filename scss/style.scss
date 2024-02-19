@@ -1974,10 +1974,18 @@ textarea.form-control {
 	justify-content: center;
 }
 
+.skill-level-container {
+	width: 200px;
+	height: 35px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	overflow: hidden;
+}
+
 .skill-level {
 	color : #585858;
 	font-size: 15px;
-	margin-right: 10px;
 }
 
 .skill-level-divider {
