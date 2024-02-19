@@ -9836,6 +9836,7 @@ h1, h2, h3, h4, h5,
 
 .ftco-hireme {
   background: #3e64ff;
+  margin-bottom: 50px;
   z-index: 0;
   position: relative;
 }
