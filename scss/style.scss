@@ -1013,6 +1013,9 @@ h1, h2, h3, h4, h5,
 	p{
 		color: rgba(255,255,255,.9);
 	}
+	@include media-breakpoint-down(md){
+		padding: 6em 0;
+	}
 }
 
 
