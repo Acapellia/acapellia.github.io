@@ -10794,4 +10794,11 @@ textarea.form-control {
   padding-right: 5px;
 }
 
+.container-wrapper {
+  height: 100vh; /* 브라우저의 보이는 화면 크기만큼 높이 설정 */
+  display: flex;
+  justify-content: center; /* 가운데 정렬을 위해 */
+  align-items: center; /* 가운데 정렬을 위해 */
+}
+
 /*# sourceMappingURL=style.css.map */
