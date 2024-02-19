@@ -989,7 +989,6 @@ h1, h2, h3, h4, h5,
 // HIRE ME
 .ftco-hireme{
 	background: $primary;
-	margin-bottom: 100px;
 	z-index: 0;
 	position: relative;
 	.overlay{
@@ -1641,6 +1640,7 @@ textarea.form-control {
 }
 .contact-section {
 	.img{
+		margin-bottom: 100px;
 		width: 100%;
 		background-position: top center;
 		@include media-breakpoint-down(md){

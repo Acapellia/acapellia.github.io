@@ -9836,7 +9836,6 @@ h1, h2, h3, h4, h5,
 
 .ftco-hireme {
   background: #3e64ff;
-  padding-bottom: 50px;
   z-index: 0;
   position: relative;
 }
@@ -10029,10 +10028,10 @@ textarea.form-control {
 }
 .ftco-section {
   padding: 7em 0;
-  padding-bottom: 100;
+  margin-bottom: 100;
   position: relative;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .ftco-section {
     padding: 6em 0;
   }
@@ -10452,12 +10451,13 @@ textarea.form-control {
 }
 
 .contact-section .img {
+  margin-bottom: 100px;
   width: 100%;
   background-position: top center;
 }
 @media (max-width: 991.98px) {
   .contact-section .img {
-    height: 500px;
+    height: 700px;
   }
 }
 .contact-section .contact-info p a {
