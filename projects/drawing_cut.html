@@ -4,7 +4,7 @@
     .project-info {
         .container {
             display: flex;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             flex-direction: column;
             width: 100%;
             height: 100%;
@@ -43,9 +43,6 @@
             flex-grow: 1;
         }
 
-        .row:last-child .col {
-            flex-grow: 2;
-        }
         .page {
             width: 100%;
 
@@ -147,16 +144,17 @@
             <div id="info-2-1" class="col page">
                 <h2 id="projects-section" class="heading">Process</h2>
                 <p>1. 유저가 그린 캐릭터로부터 아웃라인 검출.</p>
-                <p>2. 아웃라인 보정.</p>
-                <p>3. Pose Estimation Model 학습.</p>
+                <p>2. 아웃라인 보정.
+                    <br>&emsp;● gaussian filter, morphology, grabcut 등을 사용한 개선</br>
+                </p>
+                <p>3. Pose Estimation Model 학습.
+                    <br>&emsp;&emsp;● meta animated drawings datasets + 데이터 바우처 사업 datasets + 사내 자체 datasets</br>
+                    &emsp;&emsp;● human offset 로직 변경
+                </p>
+                <img src="/images/movenet_train_result.png" alt="" class="img-fluid" style="width: 100%; margin-bottom: 20px;">
                 <p>4. 캐릭터 포즈 추정.</p>
+                <img src="/images/arcut_process.png" alt="" class="img-fluid" style="width: 75%; margin-bottom: 20px;">
                 <p>5. 캐릭터와 애니메이션 연결 후 평면 위에 증강.</p>
-            </div>
-            <div id="info-2-2" class="col"> </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <img src="/images/arcut_process.png" alt="" class="img-fluid" style="width: 50%;">
             </div>
         </div>
         <div class="row">
@@ -166,12 +164,13 @@
                     따라서 유저가 그린 캐릭터가 사람과 비슷한 유형의 캐릭터라면 미리 제작한 다양한 동작들을 할 수 있습니다.
                 </p>
             </div>
+            <div id="info-4-1" class="col">
+                <video src="/videos/arcut.mp4" type="video/mp4" controls
+                    style="margin-bottom: 20px; width: 75%; height: auto;"></video>
+            </div>
         </div>
         <div class="row">
-            <video src="/videos/arcut.mp4" type="video/mp4" controls
-                style="margin-bottom: 20px; width: 75%; height: auto;"></video>
-            <div id="info-4-1" class="col"> </div>
-            <div id="info-4-1" class="col"> </div>
+            
         </div>
     </div>
 </body>
