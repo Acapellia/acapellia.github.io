@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .project-info {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 0px;
+        }
+
+        .row:nth-child(1) .col:nth-child(1) {
+            width: 75%
+        }
+
+        .row:nth-child(1) .col:nth-child(2) {
+            width: 25%;
+        }
+
+        .row:nth-child(2) .col:nth-child(1) {
+            width: 75%;
+        }
+
+        .col:nth-child(1) {
+            flex-grow: 3;
+        }
+
+        .col:nth-child(2) {
+            flex-grow: 1;
+        }
+
+        .row:last-child .col {
+            flex-grow: 2;
+        }
+        .page {
+            width: 100%;
+
+            .heading {
+                font-weight: 800;
+                font-size: 30px;
+                color: #3e64ff;
+            }
+        }
+    }
+</style>
+
+<head>
+    <title>Project - ARCut</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span> L</span>eeDaeGeon</a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+                data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="/index.html#home-section" class="nav-link"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="/index.html#about-section" class="nav-link"><span>About</span></a>
+                    </li>
+                    <li class="nav-item"><a href="/index.html#resume-section" class="nav-link"><span>Resume</span></a>
+                    </li>
+                    <li class="nav-item"><a href="/index.html#services-section"
+                            class="nav-link"><span>Services</span></a></li>
+                    <li class="nav-item"><a href="/index.html#projects-section"
+                            class="nav-link"><span>Projects</span></a></li>
+                    <li class="nav-item"><a href="/index.html#blog-section" class="nav-link"><span>My Blog</span></a>
+                    </li>
+                    <li class="nav-item"><a href="/index.html#contact-section" class="nav-link"><span>Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-wrap js-fullheight">
+        <div class="overlay"></div>
+        <div class="container d-flex justify-content-center align-items-center"
+            style="width: 100%; height: 100vh; background-color: #eeeeee;">
+            <!-- <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center"> -->
+            <!-- <div class="col-lg-10 ftco-animate d-flex align-items-center"> -->
+            <div class="text text-center">
+                <h1 class="mb-3 bread">손으로 그린 캐릭터 증강 콘텐츠</h1>
+                <p class="breadcrumbs">
+                    <span class="mr-2" style="color:#0044ff"># Human Pose Estimation</span>
+                    <span class="mr-2" style="color:#535353"># Movenet</span>
+                    <span class="mr-2" style="color:#0044ff"># Outline Detection</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contents -->
+    <div class="project-info container">
+        <div class="row ">
+            <div id="info-1-1" class="col page">
+                <h2 id="projects-section" class="heading">Background</h2>
+                <p>사용자가 직접 그린 캐릭터가 현실에서 살아 움직이는 경험을 제공하여 서비스 이용 시간을 증진시키고 사용자(크리에이터)가 자신의 창작물을 통해 인기를 얻거나 리워드를
+                     획득 하기 위한 기반을 마련합니다.
+
+                </p>
+                <h2 id="projects-section" class="heading">Goals</h2>
+                <ul>
+                    <li style="list-style:none; padding-left:5px;">● 캐릭터 데이터 사용하여 Pose Estimation Model 학습</li>
+                    <li style="list-style:none; padding-left:5px;">● 캐릭터 아웃라인 검출 로직 개선</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="info-2-1" class="col page">
+                <h2 id="projects-section" class="heading">Process</h2>
+                <p>1. 유저가 그린 캐릭터로부터 아웃라인 검출.</p>
+                <p>2. 아웃라인 보정.</p>
+                <p>3. Pose Estimation Model 학습.</p>
+                <p>4. 캐릭터 포즈 추정.</p>
+                <p>5. 캐릭터와 애니메이션 연결 후 평면 위에 증강.</p>
+            </div>
+            <div id="info-2-2" class="col"> </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="/images/arcut_process.png" alt="" class="img-fluid" style="width: 50%;">
+            </div>
+        </div>
+        <div class="row">
+            <div id="info-3-1" class="col page">
+                <h2 id="projects-section" class="heading">Result</h2>
+                <p>초기 캐릭터의 사이즈에서 일정 비율마다 추가된 pivot을 중심으로 움직이는 방식에서 목, 팔, 다리 등 사람의 주요 관절 pivot을 중심으로 움직일 수 있도록 변경하였습니다.
+                    따라서 유저가 그린 캐릭터가 사람과 비슷한 유형의 캐릭터라면 미리 제작한 다양한 동작들을 할 수 있습니다.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <video src="/videos/arcut.mp4" type="video/mp4" controls
+                style="margin-bottom: 20px; width: 75%; height: auto;"></video>
+            <div id="info-4-1" class="col"> </div>
+            <div id="info-4-1" class="col"> </div>
+        </div>
+    </div>
+</body>
+
+</html>
