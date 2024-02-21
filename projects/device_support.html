@@ -56,7 +56,7 @@
 </style>
 
 <head>
-    <title>Project - Object Shape Information Improvement</title>
+    <title>Project - Device Support</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -115,11 +115,11 @@
                 <!-- <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center"> -->
                 <!-- <div class="col-lg-10 ftco-animate d-flex align-items-center"> -->
                 <div class="text text-center">
-                    <h1 class="mb-3 bread">사물 형상 정보 추정 개선</h1>
+                    <h1 class="mb-3 bread">깊이 센서 미탑재 디바이스 지원</h1>
                     <p class="breadcrumbs">
-                        <span class="mr-2" style="color:#0044ff"># Object Detection</span>
-                        <span class="mr-2" style="color:#535353"># Top 1 Accuracy</span>
-                        <span class="mr-2" style="color:#0044ff"># Depth map</span>
+                        <span class="mr-2" style="color:#535353"># Contents Augmentation</span>
+                        <span class="mr-2" style="color:#535353"># ARDK Framework</span>
+                        <span class="mr-2" style="color:#0044ff"># Depth map filtering</span>
                     </p>
                 </div>
             </div>
@@ -136,34 +136,47 @@
         <div class="row ">
             <div id="info-1-1" class="col page">
                 <h2 id="projects-section" class="heading">Background</h2>
-                <p>사용자가 원하지 않는 사물에 대한 콘텐츠가 노출되거나 콘텐츠 배치가 어색한 문제를 해결 합니다.
+                <p>해당 프로젝트는 서비스 타겟 유저 30%이상 확대를 목표로 합니다. 기존 앱은 깊이 센서가 있는 iPhone 12 pro 이상에서만 동작했습니다. 깊이 추정을 도입해 AOS 포함 깊이 센서가 없는 다른 디바이스를 지원하고 낮은 성능으로 인한 다양한 문제를 해결합니다.
+
                 </p>
                 <h2 id="projects-section" class="heading">Goals</h2>
                 <ul>
-                    <li style="list-style:none; padding-left:5px;">● 사물 검출 TOP 1 선택 로직 개선</li>
-                    <li style="list-style:none; padding-left:5px;">● 깊이맵, 딥러닝 기반 사물 영역 종합 로직 개발</li>
+                    <li style="list-style:none; padding-left:5px;">● 증강현실 프레임워크 ARFoundation -> ARDK 변경</li>
+                    <li style="list-style:none; padding-left:5px;">● 콘텐츠 증강 위치 오차 보정</li>
+                    <li style="list-style:none; padding-left:5px;">● 디바이스 움직임에 따른 스캔 버튼 비활성화 완화</li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div id="info-2-1" class="col page">
                 <h2 id="projects-section" class="heading">Contents</h2>
-                <h5 style="color:#999999">1. 사물 검출 TOP 1 선택 로직 개선</h5>
-                <p>&emsp;&emsp;● 스캔 가이드 크기 변화에 따른 IoU, IoP 측정 → 최적의 스캔 가이드 크기 도출</p>
-                <p>&emsp;&emsp;● 스캔 가이드 내 사물 크기에 따른 최종 1개 사물 선택 로직 개발 </p>
-                <h5 style="color:#999999">2. 깊이맵, 딥러닝 기반 사물 영역 종합 로직 개발</h5>
-                <p>&emsp;&emsp;● 주변 환경에 따라 깊이맵 기반이 유리한 상황 존재</p>
-                <img src="/images/object_area_iou_table.png" alt="" class="img-fluid"
-                    style="vertical-align: top; width: 60%; margin-bottom: 20px;">
-                <img src="/images/object_area_crosscheck.png" alt="" class="img-fluid"
-                    style="width: 60%; margin-bottom: 20px;">
+                <h5 style="color:#999999">1. ARDK로 증강현실 프레임워크 변경</h5>
+                <p>&emsp;&emsp;● 깊이 추정 기능 사용을 위해 ARFoundation -> ARDK로 변경</p>
+                <p>&emsp;&emsp;● 안드로이드 디바이스 지원을 위해 ios 타겟 라이브러리를 안드로이드 타겟으로 포팅</p>
+                <h5 style="color:#999999">2. 콘텐츠 증강 위치 오차 보정</h5>
+                <p>&emsp;&emsp;● Problem</p>
+                <p style="font-size: 15px;">&emsp;&emsp;&emsp;&emsp;추정 깊이 사용으로 인해 발생한 사물 길이, 증강 위치 오차 보정</p>
+                <p>&emsp;&emsp;● Solutions</p>
+                <p>&emsp;&emsp;&emsp;&emsp;- 앱 시작 직후, 디바이스가 크게 움직인 후에 발생하는 안정화 되지 않은 깊이맵 필터링</p>
+                <p>&emsp;&emsp;&emsp;&emsp;- 사물 영역, 바닥 위치 등을 활용한 증강 위치 보정
+                </p>
+                    <li style="list-style:none; padding-left:5px;"></li>
+                    <li style="list-style:none; padding-left:5px;"></li>
+                <img src="/images/aug_pos_correction.png" alt="" class="img-fluid"
+                    style="width: 50%; margin-bottom: 20px;">
+
+                <h5 style="color:#999999">3. 디바이스 이동/정지 판단 조건 변경</h5>
+                <p>&emsp;&emsp;● 조건 판단에 사용되는 값 계산 방식 변경</p>
+                <p style="font-size: 15px;">&emsp;&emsp;&emsp;&emsp;- 가속도 벡터에 저역 통과 필터링을 적용</p>
+                <p style="font-size: 15px;">&emsp;&emsp;&emsp;&emsp;- 디바이스의 움직임은 잘 감지하고 떨림에 대한 민감도는 줄도록 개선</p>
+                <p>&emsp;&emsp;● 프레임 드랍에 대한 영향 완화</p>
             </div>
         </div>
         <div class="row">
             <div id="info-3-1" class="col page">
                 <h2 id="projects-section" class="heading">Result</h2>
-                <p>서비스에 가장 적합한 스캔 가이드 영역을 찾고 Top 1 정확도가 향상됨에 따라 유저가 다른 사물이 선택되어 다시 스캔하는 케이스를 10% 줄일 수 있었습니다.
-                    또한 사물에 해당하는 영역이 이전보다 정교하여 사물에 더 핏하게 콘텐츠를 증강시킬 수 있습니다.
+                <p>깊이 센서가 탑재되지 않은 디바이스까지 지원 폭을 확대하여 iOS에서도 Pro 아래 라인업을 지원하고, Galaxy 10급 이상의 안드로이드 디바이스를 지원합니다.
+                    &ensp;또한 손떨림으로 인해 촬영 버튼을 누르지 못 하는 케이스가 크게 줄어 사용성이 향상되었습니다. 
                 </p>
             </div>
         </div>
