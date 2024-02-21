@@ -56,7 +56,7 @@
 </style>
 
 <head>
-    <title>Project - ARCut</title>
+    <title>Project - Object Shape Information Improvement</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -114,11 +114,11 @@
             <!-- <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center"> -->
             <!-- <div class="col-lg-10 ftco-animate d-flex align-items-center"> -->
             <div class="text text-center">
-                <h1 class="mb-3 bread">손으로 그린 캐릭터 증강 콘텐츠</h1>
+                <h1 class="mb-3 bread">사물 형상 정보 추정 개선</h1>
                 <p class="breadcrumbs">
-                    <span class="mr-2" style="color:#0044ff"># Human Pose Estimation</span>
-                    <span class="mr-2" style="color:#535353"># Movenet</span>
-                    <span class="mr-2" style="color:#0044ff"># Outline Detection</span>
+                    <span class="mr-2" style="color:#0044ff"># Object Detection</span>
+                    <span class="mr-2" style="color:#535353"># Top 1 Accuracy</span>
+                    <span class="mr-2" style="color:#0044ff"># Depth map</span>
                 </p>
             </div>
         </div>
@@ -129,49 +129,36 @@
         <div class="row ">
             <div id="info-1-1" class="col page">
                 <h2 id="projects-section" class="heading">Background</h2>
-                <p>사용자가 직접 그린 캐릭터가 현실에서 살아 움직이는 경험을 제공하여 서비스 이용 시간을 증진시키고 사용자(크리에이터)가 자신의 창작물을 통해 인기를 얻거나 리워드를
-                     획득 하기 위한 기반을 마련합니다.
-
+                <p>사용자가 원하지 않는 사물에 대한 콘텐츠가 노출되거나 콘텐츠 배치가 어색한 문제를 해결 합니다.
                 </p>
                 <h2 id="projects-section" class="heading">Goals</h2>
                 <ul>
-                    <li style="list-style:none; padding-left:5px;">● 캐릭터 데이터 사용하여 Pose Estimation Model 학습</li>
-                    <li style="list-style:none; padding-left:5px;">● 캐릭터 아웃라인 검출 로직 개선</li>
+                    <li style="list-style:none; padding-left:5px;">● 사물 검출 TOP 1 선택 로직 개선</li>
+                    <li style="list-style:none; padding-left:5px;">● 깊이맵, 딥러닝 기반 사물 영역 종합 로직 개발</li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div id="info-2-1" class="col page">
-                <h2 id="projects-section" class="heading">Process</h2>
-                <p>1. 유저가 그린 캐릭터로부터 아웃라인 검출.</p>
-                <p>2. 아웃라인 보정.
-                    <br>&emsp;● gaussian filter, morphology, grabcut 등을 사용한 개선</br>
-                </p>
-                <img src="/images/drawing_outline_enhance.png" alt="" class="img-fluid" style="width: 100%; margin-bottom: 20px;">
-                <p>3. Pose Estimation Model 학습.
-                    <br>&emsp;&emsp;● meta animated drawings datasets + 데이터 바우처 사업 datasets + 사내 자체 datasets</br>
-                    &emsp;&emsp;● human offset 로직 변경
-                </p>
-                <img src="/images/movenet_train_result.png" alt="" class="img-fluid" style="width: 100%; margin-bottom: 20px;">
-                <p>4. 캐릭터 포즈 추정.</p>
-                <img src="/images/arcut_process.png" alt="" class="img-fluid" style="width: 75%; margin-bottom: 20px;">
-                <p>5. 캐릭터와 애니메이션 연결 후 평면 위에 증강.</p>
+                <h2 id="projects-section" class="heading">Contents</h2>
+                <h5>사물 검출 TOP 1 선택 로직 개선</h5>
+                <p>&emsp;&emsp;● 스캔 가이드 크기 변화에 따른 IoU, IoP 측정 → 최적의 스캔 가이드 크기 도출</p>
+                <p>&emsp;&emsp;● 스캔 가이드 내 사물 크기에 따른 최종 1개 사물 선택 로직 개발 </p>
+                <h5>깊이맵, 딥러닝 기반 사물 영역 종합 로직 개발</h5>
+                <p>&emsp;&emsp;● 주변 환경에 따라 깊이맵 기반이 유리한 상황 존재</p>
+                <img src="/images/object_area_iou_table.png" alt="" class="img-fluid"
+                    style="vertical-align: top; width: 60%; margin-bottom: 20px;">
+                <img src="/images/object_area_crosscheck.png" alt="" class="img-fluid"
+                    style="width: 60%; margin-bottom: 20px;">
             </div>
         </div>
         <div class="row">
             <div id="info-3-1" class="col page">
                 <h2 id="projects-section" class="heading">Result</h2>
-                <p>초기 캐릭터의 사이즈에서 일정 비율마다 추가된 pivot을 중심으로 움직이는 방식에서 목, 팔, 다리 등 사람의 주요 관절 pivot을 중심으로 움직일 수 있도록 변경하였습니다.
-                    따라서 유저가 그린 캐릭터가 사람과 비슷한 유형의 캐릭터라면 미리 제작한 다양한 동작들을 할 수 있습니다.
+                <p>서비스에 가장 적합한 스캔 가이드 영역을 찾고 Top 1 정확도가 향상됨에 따라 유저가 다른 사물이 선택되어 다시 스캔하는 케이스를 10% 줄일 수 있었습니다.
+                    또한 사물에 해당하는 영역이 이전보다 정교하여 사물에 더 핏하게 콘텐츠를 증강시킬 수 있습니다.
                 </p>
             </div>
-            <div id="info-4-1" class="col">
-                <video src="/videos/arcut.mp4" type="video/mp4" controls
-                    style="margin-bottom: 20px; width: 75%; height: auto;"></video>
-            </div>
-        </div>
-        <div class="row">
-            
         </div>
     </div>
     <footer class="project-info-footer" style="padding:3em 0; background:black; margin-top:50px; margin-bottom: 50px;">
